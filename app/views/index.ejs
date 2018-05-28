@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <% include partials/template/head.ejs %>
+</head>
+<body>
+<div id="outer-wrap" class="outer-wrap">
+    <% include partials/template/header.ejs %>
+
+
+    <div class="container">
+        <section>
+            <% include partials/content/maincontent.ejs %>
+        </section>
+    </div>
+</div>
+<script>
+    function signOut() {
+        const form = document.createElement("form");
+        form.setAttribute("method", 'post');
+        form.setAttribute("action", '/logout');
+        document.body.appendChild(form);
+        form.submit();
+    }
+</script>
+</body>
+</html>
